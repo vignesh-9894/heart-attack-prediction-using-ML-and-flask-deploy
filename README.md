@@ -1,1 +1,9 @@
-# vicky
+heart attack prediction using ML and flask deploy 
+
+algorithms:
+LogisticRegression
+DecisionTreeClassifier
+SVC
+AdaBoostClassifier
+GradientBoostingClassifier
+RandomForestClassifier
