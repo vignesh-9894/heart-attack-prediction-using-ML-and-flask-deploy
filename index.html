@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title>Deployment</title>
+  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  
+</head>
+
+<body style="background: #000;">
+ <div class="login">
+	<h2>HEART ATTACK PREDICTION</h2>
+
+     <!-- Main Input For Receiving Query to our ML -->
+    <form action="{{ url_for('predict')}}"method="post">
+
+
+    	<input type="number" name="Age" placeholder="Age" required="required" />
+        <input type="number" name="Sex" placeholder="Sex" required="required" />
+	<input type="number" name="Chest_pain_type" placeholder="Chest_pain_type" required="required" />
+	<input type="number" name="BP" placeholder="BP" required="required" />
+        <input type="number" name="Cholesterol" placeholder="Cholesterol" required="required" />
+	
+	<input type="number" name="FBS_over_120" placeholder="FBS_over_120" required="required" />
+	<input type="number" name="EKG_results" placeholder="EKG_results" required="required" />
+        <input type="number" name="Max_HR" placeholder="Max_HR" required="required" />
+	<input type="number" name="Exercise_angina" placeholder="Exercise_angina" required="required" />
+	<input type="float" name="ST_depression" placeholder="ST_depression" required="required" />
+        
+	<input type="number" name="Slope_of_ST" placeholder="Slope_of_ST" required="required" />
+	<input type="number" name="Number_of_vessels_fluro" placeholder="Number_of_vessels_fluro" required="required" />
+	<input type="number" name="Thallium" placeholder="Thallium" required="required" />
+
+
+
+        <button type="submit" class="btn btn-primary btn-block btn-large">prediction</button>
+    </form>
+
+   <br>
+   <br>
+   {{ prediction_text }}
+
+ </div>
+
+
+</body>
+</html>
